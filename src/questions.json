@@ -14,7 +14,10 @@
           "id": 2,
           "text": "Quel est votre âge ?",
           "type": "number",
-          "required": true
+          "required": true,
+          "min": 1,
+          "max": 99
+          
         },
         {
           "id": 3,
@@ -31,7 +34,9 @@
           "id": 4,
           "text": "Votre salaire annuel ?",
           "type": "number",
-          "required": true
+          "required": true,
+          "min": 0,
+          "max": 100000
         },
         {
           "id": 5,
@@ -49,6 +54,14 @@
           "text": "Quel est le nombre de personnes vivant dans votre foyer ?",
           "type": "number",
           "required": true
+        },
+        {
+          "id": 100,
+          "text": "Combien comptez vous avoir d'enfant ?",
+          "type": "number",
+          "required": true,
+          "min": 0,
+          "max": 10
         }
       ]
     },
@@ -60,7 +73,8 @@
           "id": 7,
           "text": "Combien de temps passez-vous dans les transports chaque jour (en minutes) ?",
           "type": "number",
-          "required": true
+          "required": true,
+          "min": 0
         },
         {
           "id": 8,
@@ -91,17 +105,23 @@
         {
           "id": 10,
           "text": "Combien de douches prenez-vous des douches (par semaines) ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 100
         },
         {
           "id": 11,
           "text": "Quelle est la durée moyenne de vous douches (en minutes) ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 60
         },
         {
           "id": 12,
           "text": "Combien de bain prenez-vous par an ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 20
         }
       ]
     },
@@ -112,12 +132,16 @@
         {
           "id": 13,
           "text": "Combien de fois tirez-vous la chasse par semaine ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 100
         },
         {
           "id": 14,
           "text": "Combien de feuilles de papier toilette utilisez-vous par semaine ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 100
         },
         {
           "id": 15,
@@ -132,12 +156,16 @@
         {
           "id": 16,
           "text": "Estimez à combien s'élève la facture d'éléctricité de votre foyer (en €) ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 1000
         },
         {
           "id": 17,
           "text": "Estimez à combien s'élève la facture de gaz de votre foyer (en €) ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 1000
         },
         {
           "id": 18,
@@ -159,17 +187,23 @@
         {
           "id": 19,
           "text": "Combien de fois mangez-vous de la viande par semaine ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 50
         },
         {
           "id": 20,
           "text": "Combien de fois prenez-vous l'avion par an ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 50
         },
         {
           "id": 21,
           "text": "Combien de fois mangez-vous dans les fast-food par mois ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 200
         },
         {
           "id": 22,
@@ -199,7 +233,9 @@
         {
           "id": 24,
           "text": "Combien d'achat en ligne faites-vous par mois ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 200
         }
       ]
     },
@@ -219,27 +255,37 @@
         {
           "id": 26,
           "text": "Toutes les combien d'années achetez-vous un nouveau téléphone ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 20
         },
         {
           "id": 27,
           "text": "Toutes les combien d'années achetez-vous un nouveau ordinateur ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 20
         },
         {
           "id": 28,
           "text": "Toutes les combien d'années achetez-vous une nouvelle télévision ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 20
         },
         {
           "id": 29,
           "text": "Toutes les combien d'années achetez-vous un nouveau appareil électronique grand public (liseuse, tablette...) ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 20
         },
         {
           "id": 30,
           "text": "Combien d' habits neufs achetez-vous par an ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 20
         }
       ]
     },
@@ -259,17 +305,23 @@
         {
           "id": 32,
           "text": "Combien de croisières envisagez-vous de faire dans les 5 prochaines années ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 50
         },
         {
           "id": 33,
           "text": "A combien de giga s'élève votre forfait mobile ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 200
         },
         {
           "id": 34,
           "text": "Combien de mail avez-vous dans votre boite mail ?",
-          "type": "number"
+          "type": "number",
+          "min": 0,
+          "max": 100000
         },
         {
           "id": 35,
