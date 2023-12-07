@@ -9,7 +9,8 @@ const FormComponent = ({ current_page }) => {
       case 'text':
         return <input type="text" />;
       case 'number':
-        return <input type="number" />;
+        return <input type="number" min={question.min}
+          max={question.max} />;
       case 'select':
         return (
           <select>
