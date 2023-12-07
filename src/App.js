@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import FormComponent from './components/FormPageTest';
 import './styles/App.css';
 
