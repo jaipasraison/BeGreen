@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import FormComponent from './components/FormPageTest';
-import './App.css';
+import './styles/App.css';
 
 function App() {
   return (
