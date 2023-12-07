@@ -1,0 +1,53 @@
+{
+    "pages": [
+      {
+        "id": 1,
+        "title": "Page 1",
+        "questions": [
+          {
+            "id": 1,
+            "text": "Quel est votre nom ?",
+            "type": "text",
+            "required": true
+          },
+          {
+            "id": 2,
+            "text": "Quel est votre âge ?",
+            "type": "number",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Page 2",
+        "questions": [
+          {
+            "id": 3,
+            "text": "Sélectionnez votre genre",
+            "type": "select",
+            "options": ["Homme", "Femme", "Autre"],
+            "required": true
+          },
+          {
+            "id": 4,
+            "text": "Quels sont vos intérêts ?",
+            "type": "checkbox",
+            "options": ["Sport", "Musique", "Voyages"]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Page 3",
+        "questions": [
+          {
+            "id": 5,
+            "text": "Décrivez-vous en quelques mots",
+            "type": "textarea"
+          }
+        ]
+      }
+    ]
+  }
+  
