@@ -1,38 +1,36 @@
 import React from 'react';
 import formData from '../questions.json';
-import '../styles/form.css';
 
 const FormComponent = ({ current_page }) => {
-  const renderFormField = (question) => {
-    switch (question.type) {
-      case 'text':
-        return <input type="text" />;
-      case 'number':
-        return <input type="number" />;
-      case 'select':
-        return (
-          <select>
-            {question.options.map((option, index) => (
-              <option key={index}>{option}</option>
-            ))}
-          </select>
-        );
-      case 'checkbox':
-        return question.options.map((option, index) => (
-          <div key={index}>
-            <input type="checkbox" id={`checkbox-${index}`} />
-            <label htmlFor={`checkbox-${index}`}>{option}</label>
-          </div>
-        ));
-      case 'textarea':
-        return <textarea />;
-      default:
-        return null;
-    }
-  };
-
-  return (
-    <div>
+    const renderFormField = (question) => {
+      switch (question.type) {
+        case 'text':
+          return <input type="text" />;
+        case 'number':
+          return <input type="number" />;
+        case 'select':
+          return (
+            <select>
+              {question.options.map((option, index) => (
+                <option key={index}>{option}</option>
+              ))}
+            </select>
+          );
+        case 'checkbox':
+          return question.options.map((option, index) => (
+            <div key={index}>
+              <input type="checkbox" id={`checkbox-${index}`} />
+              <label htmlFor={`checkbox-${index}`}>{option}</label>
+            </div>
+          ));
+        case 'textarea':
+          return <textarea />;
+        default:
+          return null;
+      }
+    };
+  
+    return (
       <form>
         {formData.pages
           .filter((page) => page.id === current_page)
@@ -50,9 +48,8 @@ const FormComponent = ({ current_page }) => {
           ))}
         <button type="submit">Soumettre</button>
       </form>
-    </div>
-  );
-};
-
-export default FormComponent;
+    );
+  };
+  
+  export default FormComponent;
 
