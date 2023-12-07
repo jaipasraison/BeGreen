@@ -1,18 +1,18 @@
 import React from 'react';
 import formData from '../questions.json';
+import '../styles/form.css';
 
 const FormComponent = ({ current_page }) => {
+  const totalSteps = formData.pages.length;
   const renderFormField = (question) => {
     switch (question.type) {
       case 'text':
         return <input type="text" />;
       case 'number':
-        return <input type="number" min={question.min}
-          max={question.max} />;
+        return <input type="number" />;
       case 'select':
         return (
           <select>
-            <option key={200}>Choisir</option>
             {question.options.map((option, index) => (
               <option key={index}>{option}</option>
             ))}
@@ -27,48 +27,36 @@ const FormComponent = ({ current_page }) => {
         ));
       case 'textarea':
         return <textarea />;
-      case 'range':
-        return (
-          <div>
-            <input
-              type="range"
-              min={question.min}
-              max={question.max}
-              step={question.step}
-              list={`tickmarks-${question.id}`}
-            />
-            <datalist id={`tickmarks-${question.id}`}>
-              {Object.entries(question.labels).map(([value, label]) => (
-                <option key={value} value={value} />
-              ))}
-            </datalist>
-          </div>
-        );
       default:
         return null;
     }
   };
 
   return (
-    <form>
-      {formData.pages
-        .filter((page) => page.id === current_page)
-        .map((page) => (
-          <div key={page.id}>
-            <h2>{page.title}</h2>
-            {page.questions.map((question) => (
-              <div key={question.id}>
-                <label>{question.text}</label>
-                {renderFormField(question)}
-                {question.required && <span style={{ color: 'red' }}>*</span>}
+    <div className="card">
+      <h2 class="card-title">Mon Profil</h2>
+      <div className="progress-bar">
+        <div className="progress-indicator" style={{ width: `${(current_page / totalSteps) * 100}%` }}></div>
+      </div>
+      <div className="card-content">
+        <form>
+          {formData.pages
+            .filter((page) => page.id === current_page)
+            .map((page) => (
+              <div key={page.id}>
+                {page.questions.map((question) => (
+                  <div key={question.id}>
+                    <label>{question.text}</label>
+                    {renderFormField(question)}
+                  </div>
+                ))}
               </div>
             ))}
-          </div>
-        ))}
-      <button type="submit">Soumettre</button>
-    </form>
+          <button type="submit">Suivant</button>
+        </form>
+      </div>
+    </div>
   );
 };
 
 export default FormComponent;
-
