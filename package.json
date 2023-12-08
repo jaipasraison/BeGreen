@@ -12,13 +12,9 @@
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
-<<<<<<< HEAD
-    "react-animations": "^1.0.0",
-=======
     "react-bootstrap": "^2.9.1",
     "chart.js": "^4.4.1",
     "react-chartjs-2": "^5.2.0",
->>>>>>> a03e05294454ab3c6a598c2bc804e20e0489afa4
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.1",
     "react-scripts": "5.0.1",
