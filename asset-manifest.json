@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/BeGreen/static/css/main.416a6ba1.css",
-    "main.js": "/BeGreen/static/js/main.96b345a7.js",
+    "main.css": "/BeGreen/static/css/main.c6775733.css",
+    "main.js": "/BeGreen/static/js/main.73225606.js",
     "static/media/alimentation.png": "/BeGreen/static/media/alimentation.20e245795e786cf34677.png",
     "static/media/energie-internet.png": "/BeGreen/static/media/energie-internet.9f22746a6b991b232682.png",
     "static/media/environnement.png": "/BeGreen/static/media/environnement.41156d18c15570e2a582.png",
     "static/media/gestes-quotidiens.png": "/BeGreen/static/media/gestes-quotidiens.2c5dd1858e15f0979e57.png",
     "index.html": "/BeGreen/index.html",
-    "main.416a6ba1.css.map": "/BeGreen/static/css/main.416a6ba1.css.map",
-    "main.96b345a7.js.map": "/BeGreen/static/js/main.96b345a7.js.map"
+    "main.c6775733.css.map": "/BeGreen/static/css/main.c6775733.css.map",
+    "main.73225606.js.map": "/BeGreen/static/js/main.73225606.js.map"
   },
   "entrypoints": [
-    "static/css/main.416a6ba1.css",
-    "static/js/main.96b345a7.js"
+    "static/css/main.c6775733.css",
+    "static/js/main.73225606.js"
   ]
 }
