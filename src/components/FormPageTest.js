@@ -1,19 +1,81 @@
-import React from 'react';
+import React, { useState } from 'react';
 import formData from '../questions.json';
 import '../styles/form.css';
 
-const FormComponent = ({ current_page }) => {
+const FormComponent = () => {
+  const [current_page, setPage] = useState(3);
   const totalSteps = formData.pages.length;
+  const [formResponses, setFormResponses] = useState(Array(totalSteps).fill({}));
+
+  const validateCurrentPage = () => {
+    const currentPageQuestions = formData.pages.find(
+      (page) => page.id === current_page
+    )?.questions;
+
+    if (currentPageQuestions) {
+      return currentPageQuestions.every((question) =>
+        formResponses[current_page - 1].hasOwnProperty(question.id)
+      );
+    }
+
+    return true;
+  };
+
+  const previousPage = (e) => {
+    e.preventDefault();
+    current_page !== 1 ? setPage(current_page - 1) : console.log('cc');
+  };
+
+  const nextPage = (e) => {
+    e.preventDefault();
+
+    if (validateCurrentPage()) {
+      setPage(current_page + 1);
+    } else {
+      console.log('Veuillez répondre à toutes les questions avant de passer à la page suivante.');
+    }
+  };
+
+  const handleInputChange = (questionId, value) => {
+    setFormResponses((prevResponses) => {
+      const updatedResponses = [...prevResponses];
+      updatedResponses[current_page - 1] = {
+        ...prevResponses[current_page - 1],
+        [questionId]: value,
+      };
+      return updatedResponses;
+    });
+  };
+
   const renderFormField = (question) => {
+    const response = formResponses[current_page - 1][question.id];
+
     switch (question.type) {
       case 'text':
-        return <input type="text" />;
+        return (
+          <input
+            type="text"
+            value={response || ''}
+            onChange={(e) => handleInputChange(question.id, e.target.value)}
+          />
+        );
       case 'number':
-        return <input type="number" min={question.min}
-          max={question.max} />;
+        return (
+          <input
+            type="number"
+            min={question.min}
+            max={question.max}
+            value={response || ''}
+            onChange={(e) => handleInputChange(question.id, e.target.value)}
+          />
+        );
       case 'select':
         return (
-          <select>
+          <select
+            value={response || 'Choisir'}
+            onChange={(e) => handleInputChange(question.id, e.target.value)}
+          >
+            <option key={200} value="Choisir">Choisir</option>
             {question.options.map((option, index) => (
               <option key={index}>{option}</option>
             ))}
@@ -22,12 +84,28 @@ const FormComponent = ({ current_page }) => {
       case 'checkbox':
         return question.options.map((option, index) => (
           <div key={index}>
-            <input type="checkbox" id={`checkbox-${index}`} />
-            <label htmlFor={`checkbox-${index}`}>{option}</label>
+            <input
+              type="checkbox"
+              id={`checkbox-${index}`}
+              checked={response && response.includes(option)}
+              onChange={(e) => {
+                const updatedResponse = e.target.checked
+                  ? [...(response || []), option]
+                  : (response || []).filter((selectedOption) => selectedOption !== option);
+
+                handleInputChange(question.id, updatedResponse);
+              }}
+            />
+            <label htmlFor={`checkbox-${index}`} className='test'>{option}</label>
           </div>
         ));
       case 'textarea':
-        return <textarea />;
+        return (
+          <textarea
+            value={response || ''}
+            onChange={(e) => handleInputChange(question.id, e.target.value)}
+          />
+        );
       default:
         return null;
     }
@@ -35,9 +113,12 @@ const FormComponent = ({ current_page }) => {
 
   return (
     <div className="card">
-      <h2 class="card-title">Mon Profil</h2>
+      <h2 className="card-title">Mon Profil</h2>
       <div className="progress-bar">
-        <div className="progress-indicator" style={{ width: `${(current_page / totalSteps) * 100}%` }}></div>
+        <div
+          className="progress-indicator"
+          style={{ width: `${(current_page / totalSteps) * 100}%` }}
+        ></div>
       </div>
       <div className="card-content">
         <form>
@@ -53,7 +134,19 @@ const FormComponent = ({ current_page }) => {
                 ))}
               </div>
             ))}
-          <button type="submit">Suivant</button>
+          {current_page < totalSteps ? (
+            <div>
+              <button onClick={(e) => previousPage(e)}>Précédent</button>
+              <button onClick={(e) => nextPage(e)}>Suivant</button>
+            </div>
+          ) : (
+            <div>
+              <button onClick={(e) => previousPage(e)}>Précédent</button>
+              <button onClick={() => console.log('Envoyer :', formResponses)}>
+                Envoyer
+              </button>
+            </div>
+          )}
         </form>
       </div>
     </div>
@@ -61,3 +154,4 @@ const FormComponent = ({ current_page }) => {
 };
 
 export default FormComponent;
+
