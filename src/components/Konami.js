@@ -1,5 +1,7 @@
 export default function Konami(){
     let konamiPosition = 0;
+    let rickPosition = 0;
+    let bianPosition = 0;
     const konami = [
         "ArrowUp",
         "ArrowUp",
@@ -12,16 +14,27 @@ export default function Konami(){
         "KeyB",
         "KeyQ",
     ];
-    // let rick = [
-    //     "KeyR",
-    //     "KeyI",
-    //     "KeyC",
-    //     "KeyK"
-    // ]
+    let rick = [
+        "KeyR",
+        "KeyI",
+        "KeyC",
+        "KeyK",
+    ];
+    let cuckbian = [
+        "KeyC",
+        "KeyU",
+        "KeyC",
+        "KeyK",
+        "KeyB",
+        "KeyI",
+        "KeyQ",
+        "KeyN",
+    ]
 
     window.addEventListener("keydown", (e) => {
         watchKonami(e);
-        // watchRick(e);
+        watchRick(e);
+        watchBian(e);
     });
 
     function watchKonami(e){
@@ -38,15 +51,27 @@ export default function Konami(){
         }
     }
 
-    // function watchRick(){
-    //     if (e.code == rick[konamiPosition]){
-    //         konamiPosition++;
-    //         console.log(e.code);
+    function watchRick(e){
+        if (e.code == rick[rickPosition]){
+            rickPosition++;
+            console.log(e.code);
 
-    //         if(konamiPosition === rick.length){
-    //             alert('Kuuuu');
+            if(rickPosition === rick.length){
+                alert('Kuuuu');
+                rickPosition = 0;
+            }
+        }
+    }
 
-    //         }
-    //     }
-    // }
+    function watchBian(e){
+        if (e.code == cuckbian[bianPosition]){
+            bianPosition++;
+            console.log(e.code);
+
+            if(bianPosition === cuckbian.length){
+                alert('Je suis le cuck originel');
+                bianPosition = 0;
+            }
+        }
+    }
 }
