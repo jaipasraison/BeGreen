@@ -1,11 +1,11 @@
 import React from 'react';
 import image from "../img/logo.png"
 import "../styles/PageResult.css"
-import alimentation from "../img/alimentation.png"
-import energie from "../img/energie-internet.png"
-import environnement from "../img/environnement.png"
-import quotidien from "../img/gestes-quotidiens.png"
-import transport from "../img/transports.png"
+import alim from "../img/alim.png"
+import ene from "../img/ene.png"
+import env from "../img/env.png"
+import quot from "../img/quot.png"
+import tran from "../img/tran.png"
 // import { useParams } from 'react-router';
 
 const Result = () => {
@@ -33,11 +33,11 @@ const Result = () => {
   // Render specific properties or handle the object accordingly
   // Données fictives pour les 5 cartes
   const cardData = [
-    { title: 'Alimentation', imageSrc: alimentation, percentage: 80 },
-    { title: 'Energie', imageSrc: energie, percentage: 60 },
-    { title: 'Environnement', imageSrc: environnement, percentage: 75 },
-    { title: 'Quotidien', imageSrc: quotidien, percentage: 90 },
-    { title: 'Transport', imageSrc: transport, percentage: 50 },
+    { title: 'Allimentation', imageSrc: alim, percentage: 80 },
+    { title: 'Energie', imageSrc: ene, percentage: 60 },
+    { title: 'Environnement', imageSrc: env, percentage: 75 },
+    { title: 'Quotidien', imageSrc: quot, percentage: 90 },
+    { title: 'Transport', imageSrc: tran, percentage: 50 },
   ];
 
   const additionalCards = [
@@ -52,21 +52,21 @@ const Result = () => {
       </header>
       <main className="main-container">
         <div className="main-content">
-          <div className="card-container">
+          <div className="card_stats-container">
             {cardData.map((card, index) => (
               <div key={index} className="card_stats">
-                <img src={card.imageSrc} alt={card.title} className="card-image" />
-                <h2 className="card-title">{card.title}</h2>
-                <p className="card-percentage">{card.percentage}%</p>
+                <img src={card.imageSrc} alt={card.title} className="card_stats-image" />
+                <h2 className="card_stats-title">{card.title}</h2>
+                <p className="card_stats-percentage">{card.percentage}%</p>
               </div>
             ))}
           </div>
         </div>
         <div className="additional-cards-container">
           {additionalCards.map((card, index) => (
-            <div key={index} className="card">
-              <h2 className="card-title">{card.title}</h2>
-              <p className="card-percentage">{card.percentage}%</p>
+            <div key={index} className="card_stats">
+              <h2 className="card_stats-title">{card.title}</h2>
+              <p className="card_stats-percentage">{card.percentage}%</p>
             </div>
           ))}
         </div>
