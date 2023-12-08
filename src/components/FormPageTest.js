@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import formData from '../questions.json';
+import { useRecoilState } from 'recoil';
+import { formResult } from '../atome/atome'
 import '../styles/form.css';
 
 const FormComponent = () => {
-  const [current_page, setPage] = useState(7);
+  const [current_page, setPage] = useState(1);
+  const [test, setformResult] = useRecoilState(formResult)
   const totalSteps = formData.pages.length;
   const [formResponses, setFormResponses] = useState(Array(totalSteps).fill({}));
 
