@@ -12,7 +12,6 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    padding: 20px;
     border-bottom: 2px solid #000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -21,6 +20,7 @@ header {
 
 .logo {
     width: 100px;
+    margin: 20px;
 }
 
 main {

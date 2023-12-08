@@ -1,6 +1,7 @@
 import React from 'react';
 import image from "../img/logo.png"
 import "../styles/PageResult.css"
+<<<<<<< HEAD
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -14,6 +15,13 @@ import Icontransport from '../img/icon_transports.png';
 import Iconbase from '../img/icon_base.png';
 
 
+=======
+import alim from "../img/alim.png"
+import ene from "../img/ene.png"
+import env from "../img/env.png"
+import quot from "../img/quot.png"
+import tran from "../img/tran.png"
+>>>>>>> 0ba0fc99fd0936f68c27a27f8d7918fecf4999d0
 // import { useParams } from 'react-router';
 
 const Result = () => {
@@ -41,11 +49,24 @@ const Result = () => {
   // Render specific properties or handle the object accordingly
   // Données fictives pour les 5 cartes
   const cardData = [
+<<<<<<< HEAD
     { title: 'Carte 1', imageSrc: 'lien_image_1.jpg', percentage: 80 },
     { title: 'Carte 2', imageSrc: 'lien_image_2.jpg', percentage: 60 },
     { title: 'Carte 3', imageSrc: 'lien_image_3.jpg', percentage: 75 },
     { title: 'Carte 4', imageSrc: 'lien_image_4.jpg', percentage: 90 },
     { title: 'Carte 5', imageSrc: 'lien_image_5.jpg', percentage: 50 },
+=======
+    { title: 'Allimentation', imageSrc: alim, percentage: 80 },
+    { title: 'Energie', imageSrc: ene, percentage: 60 },
+    { title: 'Environnement', imageSrc: env, percentage: 75 },
+    { title: 'Quotidien', imageSrc: quot, percentage: 90 },
+    { title: 'Transport', imageSrc: tran, percentage: 50 },
+  ];
+
+  const additionalCards = [
+    { title: 'Dépenses d\'énergie', percentage: 75 },
+    { title: 'Dépenses d\'eau', percentage: 60 },
+>>>>>>> 0ba0fc99fd0936f68c27a27f8d7918fecf4999d0
   ];
 
   return (
@@ -71,6 +92,7 @@ const Result = () => {
           </Nav>
         </Container>
       </header>
+<<<<<<< HEAD
       <main className="card-container">
         {cardData.map((card, index) => (
           <div key={index} className="card">
@@ -79,6 +101,28 @@ const Result = () => {
             <p className="card-percentage">{card.percentage}%</p>
           </div>
         ))}
+=======
+      <main className="main-container">
+        <div className="main-content">
+          <div className="card_stats-container">
+            {cardData.map((card, index) => (
+              <div key={index} className="card_stats">
+                <img src={card.imageSrc} alt={card.title} className="card_stats-image" />
+                <h2 className="card_stats-title">{card.title}</h2>
+                <p className="card_stats-percentage">{card.percentage}%</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="additional-cards-container">
+          {additionalCards.map((card, index) => (
+            <div key={index} className="card_stats">
+              <h2 className="card_stats-title">{card.title}</h2>
+              <p className="card_stats-percentage">{card.percentage}%</p>
+            </div>
+          ))}
+        </div>
+>>>>>>> 0ba0fc99fd0936f68c27a27f8d7918fecf4999d0
       </main>
     </>
   );
