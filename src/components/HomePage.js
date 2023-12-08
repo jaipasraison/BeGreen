@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const HomePage = () => {
     return (
-        <>
+        <div className='body'>
             <header>
                 <img src={image} alt="Logo" className="logo" />
             </header>
@@ -20,7 +20,7 @@ const HomePage = () => {
                 Commencer
               </NavLink>
             </main>
-        </>
+        </div>
     );
 };
 
