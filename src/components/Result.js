@@ -68,7 +68,6 @@ const Result = () => {
             <NavDropdown
               id="nav-dropdown-dark-example"
               title="Thèmes"
-              menuVariant="dark"
             >
               <NavDropdown.Item href="#action/3.1"><img src={Iconbase} alt="Logo theme base" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
               <NavDropdown.Item href="#action/3.1"><img src={Iconalimentation} alt="Logo theme alimentation" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
