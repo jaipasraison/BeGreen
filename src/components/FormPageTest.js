@@ -52,9 +52,14 @@ const FormComponent = () => {
       return updatedResponses;
     });
   };
-  const getResult = (e) => {
-    const data = formResponses
-
+  const getResult = () => {
+    setformResult((oldFormResult) => {
+      // Utilisez oldFormResult pour garantir que vous obtenez la dernière valeur
+      const newFormResult = { ...oldFormResult, formResponses };
+      // Stockez newFormResult dans le localStorage
+      localStorage.setItem('formResult', JSON.stringify(newFormResult));
+      return newFormResult;
+    });
   };
 
   const renderFormField = (question) => {
@@ -166,13 +171,13 @@ const FormComponent = () => {
           ) : (
             <div>
               <button onClick={(e) => previousPage(e)}>Précédent</button>
-              <NavLink
-      to={{
-        pathname: "/result",
-      }}
-    >
-      Envoyer
-    </NavLink>
+              <NavLink onClick={getResult}
+                to={{
+                  pathname: "/result",
+                }}
+              >
+                Envoyer
+              </NavLink>
             </div>
           )}
         </form>
