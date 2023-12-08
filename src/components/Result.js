@@ -1,6 +1,19 @@
 import React from 'react';
 import image from "../img/logo.png"
 import "../styles/PageResult.css"
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Iconalimentation from '../img/icon_alimentation.png';
+import Iconenergie from '../img/icon_energie.png';
+import Iconenvironnement from '../img/icon_environnement.png';
+import Iconquotidien from '../img/icon_quotidien.png';
+import Icontransport from '../img/icon_transports.png';
+import Iconbase from '../img/icon_base.png';
+
+
 import alim from "../img/alim.png"
 import ene from "../img/ene.png"
 import env from "../img/env.png"
@@ -46,9 +59,26 @@ const Result = () => {
   ];
 
   return (
-    <div className='body'>
+    <>
       <header>
         <img src={image} alt="Logo" className="logo" />
+        <Container fluid>
+
+          <Nav>
+            <NavDropdown
+              id="nav-dropdown-dark-example"
+              title="Thèmes"
+            >
+              <NavDropdown.Item href="#action/3.1"><img src={Iconbase} alt="Logo theme base" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><img src={Iconalimentation} alt="Logo theme alimentation" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><img src={Iconenergie} alt="Logo theme energie" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><img src={Iconenvironnement} alt="Logo theme environnment" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><img src={Iconquotidien} alt="Logo theme quotidien" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><img src={Icontransport} alt="Logo theme transport" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+
+            </NavDropdown>
+          </Nav>
+        </Container>
       </header>
       <main className="main-container">
         <div className="main-content">
@@ -71,7 +101,8 @@ const Result = () => {
           ))}
         </div>
       </main>
-    </div>
+    </>
   );
 };
+
 export default Result;

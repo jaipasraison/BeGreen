@@ -45,4 +45,9 @@
     font-size: 16px;
     margin: 10px;
     color: #0d0d0d;
+  }
+  
+
+  .dropdown-menu{
+    --bs-dropdown-min-width: none !important;
 }
