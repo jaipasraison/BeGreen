@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import formData from '../questions.json';
 import '../styles/form.css';
 
+import { NavLink } from 'react-router-dom';
+
+
 const FormComponent = () => {
-  const [current_page, setPage] = useState(3);
+  const [current_page, setPage] = useState(7);
   const totalSteps = formData.pages.length;
   const [formResponses, setFormResponses] = useState(Array(totalSteps).fill({}));
 
@@ -45,6 +48,10 @@ const FormComponent = () => {
       };
       return updatedResponses;
     });
+  };
+  const getResult = (e) => {
+    const data = formResponses
+
   };
 
   const renderFormField = (question) => {
@@ -142,9 +149,13 @@ const FormComponent = () => {
           ) : (
             <div>
               <button onClick={(e) => previousPage(e)}>Précédent</button>
-              <button onClick={() => console.log('Envoyer :', formResponses)}>
-                Envoyer
-              </button>
+              <NavLink
+      to={{
+        pathname: "/result",
+      }}
+    >
+      Envoyer
+    </NavLink>
             </div>
           )}
         </form>
