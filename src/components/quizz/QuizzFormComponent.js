@@ -3,7 +3,7 @@ import '../../styles/form.css';
 import questionsData from '../../quizz.json';
 import { useParams } from 'react-router';
 
-export var QuizzFormComponent = () => {
+export default function QuizzFormComponent () {
     var { theme } = useParams();
     var questions = questionsData.questions
     var [currentQuestion, setCurrentQuestion] = React.useState(0)
@@ -15,8 +15,8 @@ export var QuizzFormComponent = () => {
     }, [selected])
 
     var questionsArray = []
-    for(var i = 0; i < questions.length; i++) {
-        if(questions[i].categorie.toLowerCase() === theme) {
+    for (var i = 0; i < questions.length; i++) {
+        if (questions[i].categorie.toLowerCase() === theme) {
             questionsArray.push(questions[i])
         }
     }
@@ -26,13 +26,13 @@ export var QuizzFormComponent = () => {
         var explanations = document.querySelector(".explanations")
         var form = document.querySelector("select")
         form.disabled = true
-        if(explanations == null || !explanations || explanations === undefined) {
-            if(selected === questionsArray[currentQuestion].choixCorrect || selectedMult === questionsArray[currentQuestion].choixCorrect) {
-            explanations = document.createElement("p")
-            explanations.className = "explanations"
-            explanations.innerHTML = `Bien joué ! ${questionsArray[currentQuestion].explications}`
-            document.querySelector(".form-field").appendChild(explanations)
-         } else {
+        if (explanations == null || !explanations || explanations === undefined) {
+            if (selected === questionsArray[currentQuestion].choixCorrect || selectedMult === questionsArray[currentQuestion].choixCorrect) {
+                explanations = document.createElement("p")
+                explanations.className = "explanations"
+                explanations.innerHTML = `Bien joué ! ${questionsArray[currentQuestion].explications}`
+                document.querySelector(".form-field").appendChild(explanations)
+            } else {
                 explanations = document.createElement("p")
                 explanations.className = "movaise_reponse"
                 explanations.innerHTML = `Mauvaise réponse ! ${questionsArray[currentQuestion].explications}`
@@ -43,14 +43,14 @@ export var QuizzFormComponent = () => {
     var nextQuestion = (e) => {
         e.preventDefault()
         var explanations = document.querySelector(".explanations")
-        if(explanations) {
+        if (explanations) {
             explanations.remove()
         }
-        if(currentQuestion < questionsArray.length - 1) {
+        if (currentQuestion < questionsArray.length - 1) {
             setCurrentQuestion(currentQuestion + 1)
         } else {
             var form = document.querySelector("form")
-            form.style={animation: "fadeOut 1s"}
+            form.style = { animation: "fadeOut 1s" }
             form.style.animationFillMode = "forwards"
             setTimeout(() => {
                 form.style.display = "none"
@@ -77,7 +77,7 @@ export var QuizzFormComponent = () => {
     }
 
     return (
-        <div className="card-quizz" style={{ display: "flex", flexDirection: "column"}}>
+        <div className="card-quizz" style={{ display: "flex", flexDirection: "column" }}>
             <h2 className="card-title">{theme}</h2>
             <form>
                 <div className="form-field">
@@ -93,7 +93,7 @@ export var QuizzFormComponent = () => {
                         </div>
                     )}
                     {questionsArray[currentQuestion].questionType === "singleAnswer" && (
-                        <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center"}}>
+                        <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
                             <select>
                                 {questionsArray[currentQuestion].choix.map((choice, index) => (
                                     <option key={index} onClick={(e) => setSelected(e.target.value)}>{choice}</option>
@@ -110,5 +110,4 @@ export var QuizzFormComponent = () => {
             </form>
         </div>
     )
-                                }
-                            
+}
