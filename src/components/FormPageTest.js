@@ -3,7 +3,7 @@ import formData from '../questions.json';
 import '../styles/form.css';
 
 const FormComponent = () => {
-  const [current_page, setPage] = useState(3);
+  const [current_page, setPage] = useState(7);
   const totalSteps = formData.pages.length;
   const [formResponses, setFormResponses] = useState(Array(totalSteps).fill({}));
 
@@ -105,6 +105,20 @@ const FormComponent = () => {
             value={response || ''}
             onChange={(e) => handleInputChange(question.id, e.target.value)}
           />
+        );
+      case 'range':
+        return (
+          <div>
+            <input
+              type="range"
+              min={question.min}
+              max={question.max}
+              step={question.step}
+              value={response || question.min}
+              onChange={(e) => handleInputChange(question.id, e.target.value)}
+            />
+            <output>{response || question.min}</output>
+          </div>
         );
       default:
         return null;
