@@ -1,6 +1,19 @@
 import React from 'react';
 import image from "../img/logo.png"
 import "../styles/PageResult.css"
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import alimentation from '../img/icon_alimentation.png';
+import energie from '../img/icon_energie.png';
+import environnement from '../img/icon_environnement.png';
+import quotidien from '../img/icon_quotidien.png';
+import transport from '../img/icon_transports.png';
+import base from '../img/icon_base.png';
+
+
 // import { useParams } from 'react-router';
 
 const Result = () => {
@@ -26,31 +39,48 @@ const Result = () => {
 
 
   // Render specific properties or handle the object accordingly
-    // Données fictives pour les 5 cartes
-    const cardData = [
-      { title: 'Carte 1', imageSrc: 'lien_image_1.jpg', percentage: 80 },
-      { title: 'Carte 2', imageSrc: 'lien_image_2.jpg', percentage: 60 },
-      { title: 'Carte 3', imageSrc: 'lien_image_3.jpg', percentage: 75 },
-      { title: 'Carte 4', imageSrc: 'lien_image_4.jpg', percentage: 90 },
-      { title: 'Carte 5', imageSrc: 'lien_image_5.jpg', percentage: 50 },
-    ];
+  // Données fictives pour les 5 cartes
+  const cardData = [
+    { title: 'Carte 1', imageSrc: 'lien_image_1.jpg', percentage: 80 },
+    { title: 'Carte 2', imageSrc: 'lien_image_2.jpg', percentage: 60 },
+    { title: 'Carte 3', imageSrc: 'lien_image_3.jpg', percentage: 75 },
+    { title: 'Carte 4', imageSrc: 'lien_image_4.jpg', percentage: 90 },
+    { title: 'Carte 5', imageSrc: 'lien_image_5.jpg', percentage: 50 },
+  ];
 
-    return (
-      <>
-        <header>
-          <img src={image} alt="Logo" className="logo" />
-        </header>
-        <main className="card-container">
-          {cardData.map((card, index) => (
-            <div key={index} className="card">
-              <img src={card.imageSrc} alt={card.title} className="card-image" />
-              <h2 className="card-title">{card.title}</h2>
-              <p className="card-percentage">{card.percentage}%</p>
-            </div>
-          ))}
-        </main>
-      </>
-    );
-  };
+  return (
+    <>
+      <header>
+        <img src={image} alt="Logo" className="logo" />
+        <Container fluid>
 
-  export default Result;
+          <Nav>
+            <NavDropdown
+              id="nav-dropdown-dark-example"
+              title="Thèmes"
+            >
+              <NavDropdown.Item href="#action/3.1"><img src={base} alt="Logo theme base" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><img src={alimentation} alt="Logo theme alimentation" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><img src={energie} alt="Logo theme energie" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><img src={environnement} alt="Logo theme environnment" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><img src={quotidien} alt="Logo theme quotidien" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><img src={transport} alt="Logo theme transport" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+
+            </NavDropdown>
+          </Nav>
+        </Container>
+      </header>
+      <main className="card-container">
+        {cardData.map((card, index) => (
+          <div key={index} className="card">
+            <img src={card.imageSrc} alt={card.title} className="card-image" />
+            <h2 className="card-title">{card.title}</h2>
+            <p className="card-percentage">{card.percentage}%</p>
+          </div>
+        ))}
+      </main>
+    </>
+  );
+};
+
+export default Result;
