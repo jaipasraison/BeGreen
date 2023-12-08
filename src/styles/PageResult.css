@@ -51,3 +51,8 @@
   .dropdown-menu{
     --bs-dropdown-min-width: none !important;
 }
+
+.none{
+    text-decoration: none;
+    color: black;
+}
