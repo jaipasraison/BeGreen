@@ -6,6 +6,7 @@ import QuizzFormComponent from './components/quizz/QuizzFormComponent';
 import Result from './components/Result'
 import HomePage from './components/HomePage';
 
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -26,13 +27,13 @@ const router = createBrowserRouter([
   },
   {
     path: "/result",
-    element: <Result/>
+    element: <Result />
   }
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
   </React.StrictMode>
 );

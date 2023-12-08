@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import formData from '../questions.json';
 import '../styles/form.css';
 
+import { NavLink } from 'react-router-dom';
+
+
 const FormComponent = () => {
-  const [current_page, setPage] = useState(3);
+  const [current_page, setPage] = useState(7);
   const totalSteps = formData.pages.length;
   const [formResponses, setFormResponses] = useState(Array(totalSteps).fill({}));
 
@@ -45,6 +48,10 @@ const FormComponent = () => {
       };
       return updatedResponses;
     });
+  };
+  const getResult = () => {
+      // Stockez newFormResult dans le localStorage
+      localStorage.setItem('formResult', JSON.stringify(formResponses));
   };
 
   const renderFormField = (question) => {
@@ -106,6 +113,20 @@ const FormComponent = () => {
             onChange={(e) => handleInputChange(question.id, e.target.value)}
           />
         );
+      case 'range':
+        return (
+          <div>
+            <input
+              type="range"
+              min={question.min}
+              max={question.max}
+              step={question.step}
+              value={response || question.min}
+              onChange={(e) => handleInputChange(question.id, e.target.value)}
+            />
+            <output>{response || question.min}</output>
+          </div>
+        );
       default:
         return null;
     }
@@ -142,9 +163,13 @@ const FormComponent = () => {
           ) : (
             <div>
               <button onClick={(e) => previousPage(e)}>Précédent</button>
-              <button onClick={() => console.log('Envoyer :', formResponses)}>
+              <NavLink onClick={getResult}
+                to={{
+                  pathname: "/result",
+                }}
+              >
                 Envoyer
-              </button>
+              </NavLink>
             </div>
           )}
         </form>
