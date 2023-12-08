@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Iconalimentation from '../img/icon_alimentation.png';
-import Iconenergie from '../img/icon_.png';
+import Iconenergie from '../img/icon_energie.png';
 import Iconenvironnement from '../img/icon_environnement.png';
 import Iconquotidien from '../img/icon_quotidien.png';
 import Icontransport from '../img/icon_transports.png';
