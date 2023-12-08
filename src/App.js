@@ -4,7 +4,7 @@ import './styles/App.css';
 function App() {
   return (
     <div className="App">
-      <FormComponent current_page={2}/>
+      <FormComponent />
     </div>
   );
 }
