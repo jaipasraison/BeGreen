@@ -5,33 +5,57 @@ import '../styles/form.css';
 const FormComponent = () => {
   const [current_page, setPage] = useState(1);
   const totalSteps = formData.pages.length;
-  const [formResponses, setFormResponses] = useState({});
+  const [formResponses, setFormResponses] = useState(Array(totalSteps).fill({}));
+
+  const validateCurrentPage = () => {
+    const currentPageQuestions = formData.pages.find(
+      (page) => page.id === current_page
+    )?.questions;
+
+    if (currentPageQuestions) {
+      return currentPageQuestions.every((question) =>
+        formResponses[current_page - 1].hasOwnProperty(question.id)
+      );
+    }
+
+    return true;
+  };
 
   const previousPage = (e) => {
     e.preventDefault();
-    current_page !== 1
-      ? setPage(current_page - 1)
-      : setPage(1)
+    current_page !== 1 ? setPage(current_page - 1) : console.log('cc');
   };
 
   const nextPage = (e) => {
     e.preventDefault();
-    setPage(current_page + 1);
+
+    if (validateCurrentPage()) {
+      setPage(current_page + 1);
+    } else {
+      console.log('Veuillez répondre à toutes les questions avant de passer à la page suivante.');
+    }
   };
 
   const handleInputChange = (questionId, value) => {
-    setFormResponses((prevResponses) => ({
-      ...prevResponses,
-      [questionId]: value,
-    }));
+    setFormResponses((prevResponses) => {
+      const updatedResponses = [...prevResponses];
+      updatedResponses[current_page - 1] = {
+        ...prevResponses[current_page - 1],
+        [questionId]: value,
+      };
+      return updatedResponses;
+    });
   };
 
   const renderFormField = (question) => {
+    const response = formResponses[current_page - 1][question.id];
+
     switch (question.type) {
       case 'text':
         return (
           <input
             type="text"
+            value={response || ''}
             onChange={(e) => handleInputChange(question.id, e.target.value)}
           />
         );
@@ -41,15 +65,17 @@ const FormComponent = () => {
             type="number"
             min={question.min}
             max={question.max}
+            value={response || ''}
             onChange={(e) => handleInputChange(question.id, e.target.value)}
           />
         );
       case 'select':
         return (
           <select
+            value={response || 'Choisir'}
             onChange={(e) => handleInputChange(question.id, e.target.value)}
           >
-            <option key={200}>Choisir</option>
+            <option key={200} value="Choisir">Choisir</option>
             {question.options.map((option, index) => (
               <option key={index}>{option}</option>
             ))}
@@ -61,9 +87,14 @@ const FormComponent = () => {
             <input
               type="checkbox"
               id={`checkbox-${index}`}
-              onChange={(e) =>
-                handleInputChange(question.id, e.target.checked)
-              }
+              checked={response && response.includes(option)}
+              onChange={(e) => {
+                const updatedResponse = e.target.checked
+                  ? [...(response || []), option]
+                  : (response || []).filter((selectedOption) => selectedOption !== option);
+
+                handleInputChange(question.id, updatedResponse);
+              }}
             />
             <label htmlFor={`checkbox-${index}`}>{option}</label>
           </div>
@@ -71,17 +102,13 @@ const FormComponent = () => {
       case 'textarea':
         return (
           <textarea
+            value={response || ''}
             onChange={(e) => handleInputChange(question.id, e.target.value)}
           />
         );
       default:
         return null;
     }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Réponses finales :', formResponses);
   };
 
   return (
@@ -115,7 +142,9 @@ const FormComponent = () => {
           ) : (
             <div>
               <button onClick={(e) => previousPage(e)}>Précédent</button>
-              <button onClick={(e) => handleSubmit(e)}>Envoyer</button>
+              <button onClick={() => console.log('Envoyer :', formResponses)}>
+                Envoyer
+              </button>
             </div>
           )}
         </form>
