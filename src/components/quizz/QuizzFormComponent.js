@@ -10,10 +10,6 @@ export default function QuizzFormComponent () {
     var [selected, setSelected] = React.useState(null)
     var [selectedMult, setSelectedMult] = React.useState(null)
 
-    React.useEffect(() => {
-        console.log(selected)
-    }, [selected])
-
     var questionsArray = []
     for (var i = 0; i < questions.length; i++) {
         if (questions[i].categorie.toLowerCase() === theme) {
