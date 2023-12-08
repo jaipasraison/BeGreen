@@ -4,6 +4,9 @@ import { useRecoilState } from 'recoil';
 import { formResult } from '../atome/atome'
 import '../styles/form.css';
 
+import { NavLink } from 'react-router-dom';
+
+
 const FormComponent = () => {
   const [current_page, setPage] = useState(1);
   const [test, setformResult] = useRecoilState(formResult)
@@ -48,6 +51,10 @@ const FormComponent = () => {
       };
       return updatedResponses;
     });
+  };
+  const getResult = (e) => {
+    const data = formResponses
+
   };
 
   const renderFormField = (question) => {
@@ -159,9 +166,13 @@ const FormComponent = () => {
           ) : (
             <div>
               <button onClick={(e) => previousPage(e)}>Précédent</button>
-              <button onClick={() => console.log('Envoyer :', formResponses)}>
-                Envoyer
-              </button>
+              <NavLink
+      to={{
+        pathname: "/result",
+      }}
+    >
+      Envoyer
+    </NavLink>
             </div>
           )}
         </form>
