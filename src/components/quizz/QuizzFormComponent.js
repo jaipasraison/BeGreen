@@ -2,7 +2,6 @@ import React from 'react';
 import '../../styles/form.css';
 import questionsData from '../../quizz.json';
 import { useParams } from 'react-router';
-import { slideInDown, fadeOut } from 'react-animations';
 
 export var QuizzFormComponent = () => {
     var { theme } = useParams();
