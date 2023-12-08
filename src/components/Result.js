@@ -54,7 +54,7 @@ const Result = () => {
         <div className="main-content">
           <div className="card-container">
             {cardData.map((card, index) => (
-              <div key={index} className="card">
+              <div key={index} className="card_stats">
                 <img src={card.imageSrc} alt={card.title} className="card-image" />
                 <h2 className="card-title">{card.title}</h2>
                 <p className="card-percentage">{card.percentage}%</p>
