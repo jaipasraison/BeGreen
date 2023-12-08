@@ -1,16 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './styles/index.css';
 import FormComponent from './components/FormPageTest';
 import QuizzFormComponent from './components/quizz/QuizzFormComponent';
 import Result from './components/Result'
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-} from 'recoil';
+import HomePage from './components/HomePage';
+
 
 import {
   createBrowserRouter,
@@ -20,6 +15,10 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <HomePage/>
+  },
+  {
+    path: "/form",
     element: <FormComponent current_page={1} />
   },
   {
@@ -35,8 +34,6 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RecoilRoot>
       <RouterProvider router={router} />
-    </RecoilRoot>
   </React.StrictMode>
 );

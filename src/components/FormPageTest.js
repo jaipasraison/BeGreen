@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import formData from '../questions.json';
-import { useRecoilState } from 'recoil';
-import { formResult } from '../atome/atome'
 import '../styles/form.css';
 
 import { NavLink } from 'react-router-dom';
@@ -9,7 +7,6 @@ import { NavLink } from 'react-router-dom';
 
 const FormComponent = () => {
   const [current_page, setPage] = useState(7);
-  const [test, setformResult] = useRecoilState(formResult)
   const totalSteps = formData.pages.length;
   const [formResponses, setFormResponses] = useState(Array(totalSteps).fill({}));
 
@@ -53,13 +50,8 @@ const FormComponent = () => {
     });
   };
   const getResult = () => {
-    setformResult((oldFormResult) => {
-      // Utilisez oldFormResult pour garantir que vous obtenez la dernière valeur
-      const newFormResult = { ...oldFormResult, formResponses };
       // Stockez newFormResult dans le localStorage
-      localStorage.setItem('formResult', JSON.stringify(newFormResult));
-      return newFormResult;
-    });
+      localStorage.setItem('formResult', JSON.stringify(formResponses));
   };
 
   const renderFormField = (question) => {
