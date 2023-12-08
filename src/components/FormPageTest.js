@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 
 
 const FormComponent = () => {
-  const [current_page, setPage] = useState(7);
+  const [current_page, setPage] = useState(1);
   const totalSteps = formData.pages.length;
   const [formResponses, setFormResponses] = useState(Array(totalSteps).fill({}));
 
