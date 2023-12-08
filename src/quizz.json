@@ -276,7 +276,7 @@
     {
       "id": 23,
       "libelle": "En moyenne, quelle est la quantité d'eau journalière consommée par un ménage en France ?",
-      "categorie": "Gestes du quotidien",
+      "categorie": "Gestes_du_quotidien",
       "choix": ["100 litres", "150 litres", "200 litres", "250 litres"],
       "questionType": "singleAnswer",
       "choixCorrect": "150 litres",
@@ -285,7 +285,7 @@
     {
       "id": 24,
       "libelle": "En moyenne, combien pèse la boîte mail d'un utilisateur lambda ?",
-      "categorie": "Gestes du quotidien",
+      "categorie": "Gestes_du_quotidien",
       "choix": ["10 Mo", "100 Mo", "1 Go", "10 Go"],
       "questionType": "singleAnswer",
       "choixCorrect": "1 Go",
@@ -294,7 +294,7 @@
     {
       "id": 25,
       "libelle": "Quel est l'impact du tri de déchets par les ménages français ?",
-      "categorie": "Gestes du quotidien",
+      "categorie": "Gestes_du_quotidien",
       "choix": [
         "Il permet de réduire la quantité de déchets enfouis ou incinérés",
         "Il permet de recycler les déchets et de les réutiliser",
@@ -313,7 +313,7 @@
     {
       "id": 26,
       "libelle": "Quel est le coût énergétique de l'utilisation annuelle du chauffage en France ?",
-      "categorie": "Gestes du quotidien",
+      "categorie": "Gestes_du_quotidien",
       "choix": [
         "10 milliards d'euros",
         "20 milliards d'euros",
@@ -327,7 +327,7 @@
     {
       "id": 27,
       "libelle": "Quelle est la part énergétique des appareils électroménagers en France ?",
-      "categorie": "Gestes du quotidien",
+      "categorie": "Gestes_du_quotidien",
       "choix": ["10%", "20%", "30%", "40%"],
       "questionType": "singleAnswer",
       "choixCorrect": "10%",
@@ -336,7 +336,7 @@
     {
       "id": 28,
       "libelle": "En moyenne, combien de Français admettent ne pas avoir le réflexe d'éteindre la lumière en quittant la pièce ?",
-      "categorie": "Gestes du quotidien",
+      "categorie": "Gestes_du_quotidien",
       "choix": ["20%", "30%", "40%", "50%"],
       "questionType": "singleAnswer",
       "choixCorrect": "40%",
@@ -345,7 +345,7 @@
     {
       "id": 29,
       "libelle": "En moyenne, à combien estime-t-on l'émission de gaz à effet de serre provoquée par les loisirs des Français ?",
-      "categorie": "Gestes du quotidien",
+      "categorie": "Gestes_du_quotidien",
       "choix": [
         "1 tonne par an",
         "2 tonnes par an",
@@ -359,7 +359,7 @@
     {
       "id": 30,
       "libelle": "Quelle est la consommation énergétique journalière liée à l'envoi de données (vidéos, messages) sur les réseaux sociaux ?",
-      "categorie": "Gestes du quotidien",
+      "categorie": "Gestes_du_quotidien",
       "choix": [
         "100 mégawattheures",
         "1 gigawattheure",
@@ -437,7 +437,7 @@
       ],
       "questionType": "singleAnswer",
       "choixCorrect": "Les transports",
-      "explication": "Transport 30%, Indutrie 25%. Source : Le Monde"
+      "explications": "Transport 30%, Indutrie 25%. Source : Le Monde"
     },
     {
       "id": 36,
@@ -468,7 +468,7 @@
       ],
       "questionType": "singleAnswer",
       "choixCorrect": "Brésil",
-      "explication": "Un arbre absorbe environ 25 kg de CO2 par an, pour absorber toute l'empreinte carbonne des français, il faudrait planter 3 000 000 km2 de forêt soit 4,5 fois la superficie de la France."
+      "explications": "Un arbre absorbe environ 25 kg de CO2 par an, pour absorber toute l'empreinte carbonne des français, il faudrait planter 3 000 000 km2 de forêt soit 4,5 fois la superficie de la France."
     }
   ]
 }
