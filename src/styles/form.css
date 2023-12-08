@@ -100,6 +100,31 @@ html, body {
     margin-bottom: 10px;
     box-sizing: border-box;
   }
+
+  input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #0d0d0d;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 3px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    background-color: #0d0d0d;
+    border-color: #0d0d0d;
+  }
   
   button {
     padding: 10px;
