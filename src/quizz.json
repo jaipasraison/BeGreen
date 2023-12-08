@@ -1,0 +1,554 @@
+{
+  "questions" : [
+    {
+      "id" : 1,
+      "libelle" : "Parmi les produits primaires suivants, lequel nécessite le plus d'énergie pour sa production ?",
+      "categorie" : "Alimentation",
+      "choix" : [
+        "1kg de boeuf",
+        "1kg de lait",
+        "1kg de blé",
+        "1kg de tomates"
+      ],
+      "questionType": "singleAnswer",
+      "choixCorrect" : "1kg de boeuf",
+      "explications" : "L'élevage bovin est une activité très gourmande en énergie. Il faut environ 15 000 litres d'eau et 10 kg de céréales pour produire 1 kg de boeuf. En comparaison, il faut environ 1 000 litres d'eau et 2 kg de céréales pour produire 1 kg de lait. "
+    },
+    {
+      "id" : 2,
+      "libelle" : "Parmi les types d'agriculture suivants, lequel utilise le plus de pesticides ?",
+      "categorie" : "Alimentation",
+      "choix" : [
+        "Agriculture Intensive",
+        "Agriculture Biologique",
+        "Agriculture Raisonnée",
+        "Agriculture Conventionnelle"  
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "Agriculture Intensive",
+      "explications" : "L'agriculture intensive utilise beaucoup de pesticides pour lutter contre les ravageurs et les maladies afin de produire le plus possible sur une surface donnée. En comparaison, l'agriculture biologique et l'agriculture raisonnée utilisent bien moins de pesticides, voire aucune."
+    },
+    {
+      "id" : 3,
+      "libelle" : "Quelles sont les principales causes de la dégradation des sols ?",
+      "categorie" : "Alimentation",
+      "choix" : [
+        "L'utilisation non durable des terres",
+        "Les changements climatiques",
+        "Les activités industrielles",
+        "L'urbanisation"
+      ],
+      "questionType" : "manyAnswers",
+      "choixCorrect" : [
+        "L'utilisation non durables des terres",
+        "Les changements climatiques",
+        "Les activités industrielles",
+        "L'urbanisation"
+      ],
+      "explications": "L'utilisation non durable des terres, qui comprend l'utilisation excessive d'engrais et de pesticides, la déforestation et l'érosion, dégradent les sols"
+    },
+    {
+      "id" : 4,
+      "libelle" : "La quantité de poisson pêchée chaque année est estimée à environ 90 millions de tonnes. Si cette quantité continue d'augmenter, quelles seront les conséquences possibles sur le long terme ?",
+      "categorie" : "Alimentation",
+      "choix" : [
+        "La disparition de certaines espèces",
+        "La hausse des prix des poissons",
+        "La diminution de la biodiversité marine",
+        "Le chamboulement des chaînes alimentaires sous-marines"
+      ],
+      "questionType" : "manyAnswers",
+      "choixCorrect" : [
+        "La disparition de certaines espèces",
+        "La hausse des prix des poissons",
+        "La diminution de la biodiversité marine",
+        "Le chamboulement des chaînes alimentaires sous-marines"
+      ],
+      "explications" : "Selon l'Organisation des Nations Unies pour l'alimentation et l'agriculture (FAO), la quantité de poissons pêchée chaque année a augmenté de plus de 50 % depuis 1970. Pour contrer ce phénomène à notre échelle il faut favoriser la consommation de poissons méconnus tels que les merlus, les baudroies, les anchois ou encore les maigres qui sont des espèces peu demandées et donc non sur-pêchées."
+    },
+    {
+      "id" : 5,
+      "libelle" : "Quelles sont les émissions annuelles de gaz à effet de serre produites par l'élevage intensif ?",
+      "categorie" : "Alimentation",
+      "choix" : [
+        "2,3 milliards de tonnes",
+        "5,7 milliards de tonnes",
+        "7,1 milliards de tonnes",
+        "10 milliards de tonnes"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "7,1 milliards de tonnes",
+      "explications" : "Selon l'Organisation des Nations Unies pour l'alimentation et l'agriculture (FAO), l'élevage intensif est responsable de 7,1 gigatonnes d'émissions annuelles de gaz à effet de serre. La réduction des émissions de gaz à effet de serre liées à l'élevage intensif est un défi important, mais on peut y remédier en réduisant la consommation de viande et des produits laitiers ainsi qu'en soutennant des systèmes d'élevage plus durables."
+    },
+    {
+      "id" : 6,
+      "libelle" : "À combien de kg est estimé le gaspillage alimentaire annuel en France ?",
+      "categorie" : "Alimentation",
+      "choix" : [
+        "3 millions de tonnes",
+        "7 millions de tonnes",
+        "10 millions de tonnes",
+        "15 millions de tonnes"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "10 millions de tonnes",
+      "explications" : "Selon l'Agence de l'environnement et de la maîtrise de l'énergie (ADEME), le gaspillage alimentaire représente environ 10 millions de tonnes de produits par an en France. Par exemple, les supermarchés peuvent donner les produits en date limite de consommation et donc invendable à des associations qui les redistribuent à des personnes dans le besoin, plutôt que de les jeter."
+    },
+    {
+      "id" : 7,
+      "libelle" : "Depuis son lancement en 2017, l'action 'Légumes moches' d'Intermarché a permis de sauver combien de tonnes de légumes ?",
+      "categorie" : "Alimentation",
+      "choix" : [
+        "50 000 tonnes",
+        "100 000 tonnes",
+        "150 000 tonnes",
+        "200 000 tonnes"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "150 000 tonnes",
+      "explications" : "Selon Intermarché, l'action 'Légumes moches' a permis de sauver 150 000 tonnes de légumes depuis son lancement en 2017. Cette action consiste à commercialiser des légumes qui ne répondent pas aux critères de beauté des supermarchés, mais qui sont tout à fait comestibles, cela a permis de promouvoir la consommation de produits locaux et de saison."
+    },
+    {
+      "id" : 8,
+      "libelle" : "Parmi les habitudes alimentaires suivantes, laquelle a le coût énergétique le plus faible ?",
+      "categorie" : "Alimentation",
+      "choix" : [
+        "Une alimentation végétarienne",
+        "Une alimentation pescérienne",
+        "Une alimentation omnivore",
+        "Une alimentation carnivore"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "Une alimentation végétarienne",
+      "explications" : "Une alimentation végétarienne nécessite moins d'énergie pour produire les aliments que la viande, ce qui en fait l'option la plus économe en énergie. Néanmoins, manger exclusivement des légumes ne fait pas tout ! En effet, il est important de manger local et de saison car chauffer une serre à l'autre bout du monde ne serait pas un gain d'énergie."
+    },
+    {
+      "id" : 9,
+      "libelle" : "Quel est le type de carburant le plus utilisé en Europe ?",
+      "categorie" : "Energie",
+      "choix" : [
+        "L'électricité",
+        "Le Gaz Naturel Véhicule",
+        "Le Diesel",
+        "L'essence"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "Le Diesel",
+      "explications" : "Le Diesel est le carburant le plus utilisé en Europe. C'est bien dommage car le diesel est le carburant qui est le plus polluant de tous. Néanmoins la voiture électrique n'est pas une solution durable car sa fabrication est très polluante, contrairement à ce que l'on pense."
+    },
+    {
+      "id" : 10,
+      "libelle" : "En 2019, combien de commandes en ligne les Français ont-ils effectués ?",
+      "categorie" : "Energie",
+      "choix" : [
+        "1 milliard",
+        "1,5 milliard",
+        "2 milliards",
+        "2,5 milliards"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "1,5 milliard",
+      "explications" : "1,5 Milliard de commandes en ligne ! En matière de coût énergétique, pour livrer chacune de ces commandes, c'est l’équivalent de 1.347 tours du monde en voiture !"
+    },
+    {
+      "id" : 11,
+      "libelle" : "Par où perdons-nous le plus d'énergie dans la maison ?",
+      "categorie" : "Energie",
+      "choix" : [
+        "Par la toiture",
+        "Par les murs",
+        "Par le sol",
+        "Par les fenêtres"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "Par la toiture",
+      "explications" : "L'isolation de la toiture est la plus rentable, c'est la première étape à réaliser car c'est là que le potentiel d'économie d'énergie est le plus important."
+    },
+    {
+      "id" : 12,
+      "libelle" : "Combien le streaming vidéo produit-il de CO2 chaque année dans le monde ?",
+      "categorie" : "Energie",
+      "choix" : [
+        "1 million de tonnes",
+        "10 millions de tonnes",
+        "100 millions de tonnes",
+        "1 milliard de tonnes"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "100 millions de tonnes",
+      "explications" : "100 Millions de tonnes de CO2 de streaming vidéo ! Voici des conseils pour réduire l'empreinte carbone du streaming vidéo, chacun à son échelle : - Diminuez la qualité des vidéos dans les paramètres et évitez la HD. Plus la définition sera élevée, plus il y aura besoin de bande passante, et donc plus de consommation d’énergie. - Utilisez un écran plus petit qui consomme moins. - Privilégiez le Wi-Fi. La 4G nécessite 10 fois plus d’électricité qu’une ligne fibre ou Wi-Fi. - Téléchargez votre contenu plutôt que de le regarder en direct."
+    },
+    {
+      "id" : 13,
+      "libelle" : "Combien de logements Français sont qualifiés de passoire thermique ?",
+      "categorie" : "Energie",
+      "choix" : [
+        "2,2 millions",
+        "4,4 millions",
+        "6,6 millions",
+        "8,8 millions"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "6,6 millions",
+      "explications" : "C'est 6,6 Millions ! En 2024, ces logements dits 'Passoire Thermique' ne pourront plus être loués"
+    },
+    {
+      "id" : 14,
+      "libelle" : "Quelle est l'énergie qui renvoie le moins de CO2 dans l'air par kWh produit ?",
+      "categorie" : "Energie",
+      "choix" : [
+        "Le charbon",
+        "Le nucléaire",
+        "L'éolien",
+        "Le solaire"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "Le nucléaire",
+      "explications" : "Contrairement à ce que l'on pourrait penser, c'est bien le nucléaire qui pollue moins que l'éolien ou le solaire. Pendant la COP28, Le président français Emmanuel Macron a montré son intérêt pour le nucléaire et souhaite augmenter les énergies nucléaires car c'est la moins polluante."
+    },
+    {
+      "id" : 15,
+      "libelle" : "Le plus gros Data Center au monde est étalé sur une superficie de 16 hectares, où se situe t'il ?",
+      "categorie" : "Energie",
+      "choix" : [
+        "En France",
+        "Aux Etats-Unis",
+        "En Russie",
+        "Aux Emirats Arabes Unis"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "Aux Emirats Arabes Unis",
+      "explications" : "C'est à Dubaï, aux Émirats arabes unis ! Nous avons tout de même un Data Center de 13 hectares en France, à Lisses proche de Paris. Plusieurs milliers de tonnes de CO2 sont rejetées par an pour un hectare de data center !"
+    },
+    {
+      "id" : 16,
+      "libelle" : "Quel est le pourcentage d'énergie renouvelable dans le monde ?",
+      "categorie" : "Energie",
+      "choix" : [
+        "12%",
+        "22%",
+        "32%",
+        "42%"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "12%",
+      "explications" : "Seulement 12% d'énergie renouvelable. De plus les énergies renouvelables c'est bien, mais malheureusement pas accessible à tous les habitants de la planète. En effet, les pays les moins développés n'ont pas les moyens d'accéder à ces énergies, plus coûteuses."
+    },
+    {
+      "id" : 17,
+      "libelle" : "Combien de pourcent de CO2 économise-t-on en consommant local ?",
+      "categorie" : "Transports",
+      "choix" : [
+        "10%",
+        "20%",
+        "30%",
+        "40%"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "20%",
+      "explications" : "Selon une étude de l'Agence de l'environnement et de la maîtrise de l'énergie (ADEME), la consommation locale permet d'économiser en moyenne 20 % d'émissions de gaz à effet de serre par rapport à la consommation importée. La pandémie mondiale du COVID19 a beaucoup accéléré ce processus, mais ça reste qu'une infime partie de notre consommation quotidienne."
+    },
+    {
+      "id" : 18,
+      "libelle" : "En moyenne, quelle est l'économie d'émission de gaz à effet de serre réalisée en prenant le vélo ou les transport en commun plutôt que la voiture pour les trajets du quotidien ?",
+      "categorie" : "Transports",
+      "choix" : [
+        "30%",
+        "50%",
+        "70%",
+        "90%"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "70%",
+      "explications" : "Selon une étude de l'ADEME, une personne utilisant le vélo ou les transports en commun pour ses déplacements quotidiens émet en moyenne 70 % de moins de gaz à effets de serre qu'une personne utilisant exclusivement sa voiture. Un trajet de 5 kilomètres en voiture émet en moyenne 1,5 kilogramme de CO2, contre 0,5 kilogramme de CO2 en transport en commun comme le bus par exemple !"
+    },
+    {
+      "id" : 19,
+      "libelle" : "Quel est le mode de transport le plus émetteur de gaz à effet de serre pour les vacances ?",
+      "categorie" : "Transports",
+      "choix" : [
+        "La voiture",
+        "L'avion",
+        "Le train",
+        "Le bus"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "La voiture",
+      "explications" : "D'après l'ADEME, la voiture est le mode de transport le plus émetteur de gaz à effet de serre pour les vacances, avec 2 tonnes de CO2 émit pour 1 000 kilomètres. L'avion est également un mode de transport très émetteur de gaz à effets de serre avec 1 tonne de CO2 pour 1 000 kilomètres. Le train et le bus sont des modes de transport moins émetteurs de gaz à effet de serre avec 0,5/0,3 tonne de CO2 pour 1 000 kilomètres."
+    },
+    {
+      "id" : 20,
+      "libelle" : "Combien de tonnes de CO2 sont émis par les jets privés chaque année ?",
+      "categorie" : "Transports",
+      "choix" : [
+        "5 millions de tonnes",
+        "10 millions de tonnes",
+        "15 millions de tonnes",
+        "20 millions de tonnes"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "15 millions de tonnes",
+      "explications" : "Selon l'ONG Transport & Environment, les émissions de gaz à effet de serre des jets privés s'élevaient à 15 millions de tonnes en 2022 c'est beaucoup. Il vaut mieux prendre un char-à-voile !"
+    },
+    {
+      "id" : 21,
+      "libelle" : "Combien de tonnes de CO2 sont émis pour les transports des marchandises par an ?",
+      "categorie" : "Transports",
+      "choix" : [
+        "10 milliards de tonnes",
+        "20 milliards de tonnes",
+        "30 milliards de tonnes",
+        "40 milliards de tonnes"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "30 milliards de tonnes",
+      "explications" : "D'après l'Agence internationale de l'énergie (AIE), les émissions de gaz à effets de serre liées au transport des marchandises s'élevaient à 30 milliards de tonnes en 2022. Le transport routier est le principal mode de transport des marchandises, représentant environ 70 %."
+    },
+    {
+      "id" : 22,
+      "libelle" : "En France, combien de personnes utilisent régulièrement les transports en commun ?",
+      "categorie" : "Transport",
+      "choix" : [
+        "40%",
+        "50%",
+        "60%",
+        "70%"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "60%",
+      "explications" : "Selon une enquête de l'Insee réalisée en 2023, 60 % des Français utilisent régulièrement les transports en commun. Les transports en commun les plus utilisés sont le bus (41 %), le métro (26 %) et le train (20 %). Le covoiturage est aussi un excellent moyen de réduire son empreinte carbone au quotidien !"
+    },
+    {
+      "id" : 23,
+      "libelle" : "En moyenne, quelle est la quantité d'eau journalière consommée par un ménage en France ?",
+      "categorie" : "Gestes du quotidien",
+      "choix" : [
+        "100 litres",
+        "150 litres",
+        "200 litres",
+        "250 litres"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "150 litres",
+      "explications" : "Selon l'Observatoire des services publics d'eau et d'assainissement, un ménage français consomme en moyenne 150 litres d'eau potable par jour Pour réduire la consommation d'eau, il existe plusieurs solutions, notamment : - Réparer les fuites d'eau, une fuite de 1 goutte par seconde représente une perte de 200 litres par jour - Réduire la durée des douches de 10 minutes à 5 minutes permet d'économiser 50 litres- Récupérer l'eau de pluie permet d'économiser environ 500 litres par an"
+    },
+    {
+      "id" : 24,
+      "libelle" : "En moyenne, combien pèse la boîte mail d'un utilisateur lambda ?",
+      "categorie" : "Gestes du quotidien",
+      "choix" : [
+        "10 Mo",
+        "100 Mo",
+        "1 Go",
+        "10 Go"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "1 Go",
+      "explications" : "Selon une étude de l'entreprise de sécurité informatique Proofpoint, la boîte mail d'un utilisateur lambda pèse en moyenne 1 Go. Pour réduire le poids de sa boîte mail, on peut supprimer les messages anciens ou inutiles et compresser les pièces jointes."
+    },
+    {
+      "id" : 25,
+      "libelle" : "Quel est l'impact du tri de déchets par les ménages français ?",
+      "categorie" : "Gestes du quotidien",
+      "choix" : [
+        "Il permet de réduire la quantité de déchets enfouis ou incinérés",
+        "Il permet de recycler les déchets et de les réutiliser",
+        "Il permet de réduire la pollution de l'environnement",
+        "Il permet de préserver les ressources naturelles"
+      ],
+      "questionType" : "manyAnswers",
+      "choixCorrect" : [
+        "Il permet de réduire la quantité de déchets enfouis ou incinérés",
+        "Il permet de recycler les déchets et de les réutiliser",
+        "Il permet de réduire la pollution de l'environnement",
+        "Il permet de préserver les ressources naturelles"
+      ],
+      "explications" : "En France, le taux de recyclage des déchets ménagers est de 46,2 % en 2023. Ce taux est en hausse constante depuis plusieurs années, grâce aux efforts des pouvoirs publics, des collectivités territoriales qui encouragent les citoyens à trier leurs déchets."
+    },
+    {
+      "id" : 26,
+      "libelle" : "Quel est le coût énergétique de l'utilisation annuelle du chauffage en France ?",
+      "categorie" : "Gestes du quotidien",
+      "choix" : [
+        "10 milliards d'euros",
+        "20 milliards d'euros",
+        "30 milliards d'euros",
+        "40 milliards d'euros"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "30 milliards",
+      "explications" : "D'après l'Agence de l'environnement et de la maîtrise de l'énergie (ADEME), le coût énergétique de l'utilisation annuelle du chauffage en France s'élevait à 30 milliards d'euros en 2022. Pour réduire le coût énergétique du chauffage, il est possible d'isoler son logement et de réduire la température des radiateurs à 19 °C, c'est d'ailleurs ce que conseil le gouvernement."
+    },
+    {
+      "id" : 27,
+      "libelle" : "Quelle est la part énergétique des appareils électroménagers en France ?",
+      "categorie" : "Gestes du quotidien",
+      "choix" : [
+        "10%",
+        "20%",
+        "30%",
+        "40%"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "10%",
+      "explications" : "Selon l'Agence de l'environnement et de la maîtrise de l'énergie (ADEME), la part énergétique des appareils électroménagers en France s'élevait à 10 % en 2022, soit 150 térawattheures (TWh) d'énergie consommée par an. Pour réduire la consommation énergétique des appareils électroménagers, il important de choisir des appareils économes en énergie, d'utiliser les appareils de manière efficiente, de débrancher les appareils lorsqu'ils ne sont pas utilisés"
+    },
+    {
+      "id" : 28,
+      "libelle" : "En moyenne, combien de Français admettent ne pas avoir le réflexe d'éteindre la lumière en quittant la pièce ?",
+      "categorie" : "Gestes du quotidien",
+      "choix" : [
+        "20%",
+        "30%",
+        "40%",
+        "50%"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "40%",
+      "explications" : "Selon une enquête de l'ADEME réalisée en 2023, 40 % des Français admettent ne pas avoir le réflexe d'éteindre la lumière en quittant la pièce. Pour lutter contre ce phénomène, l'ADEME recommande de mettre en place des solutions simples, telles que des interrupteurs à détection de mouvement ou des minuteries."
+    },
+    {
+      "id" : 29,
+      "libelle" : "En moyenne, à combien estime-t-on l'émission de gaz à effet de serre provoquée par les loisirs des Français ?",
+      "categorie" : "Gestes du quotidien",
+      "choix" : [
+        "1 tonne par an",
+        "2 tonnes par an",
+        "3 tonnes par an",
+        "4 tonnes par an"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "2 tonnes par an",
+      "explications" : "Selon un rapport de l'ADEME publié en 2023, les loisirs des Français sont responsables d'une émission de gaz à effet de serre estimée à 2 tonnes par an et par personne. Certains loisirs sont particulièrement polluants et dangereux pour l'environnement comme par exemple les sports automobiles telles que le karting, mais aussi le fait de visionner des vidéos en streaming ou de jouer au jeux vidéo qui consomme beaucoup d'énergie à produire."
+    },
+    {
+      "id" : 30,
+      "libelle" : "Quelle est la consommation énergétique journalière liée à l'envoi de données (vidéos, messages) sur les réseaux sociaux ?",
+      "categorie" : "Gestes du quotidien",
+      "choix" : [
+        "100 mégawattheures",
+        "1 gigawattheure",
+        "10 gigawattheures",
+        "100 gigawattheures"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "10 gigawattheures",
+      "explications" : "Selon une étude de l'entreprise Greenspector publiée en 2023, la consommation énergétique journalière liée à l'envoi de données sur les réseaux sociaux s'élève à 10 gigawattheures. 1 h par jour sur Instagram : son bilan carbone s’élève à 441 g de CO2e par semaine, soit environ 2 km en voiture !"
+    },
+    {
+      "id" : 31,
+      "libelle" : "À combien sont estimées les émissions de gaz à effets de serre aujourd'hui comparées au début des années 1970 ?",
+      "categorie" : "Environnement",
+      "choix" : [
+        "Elles ont doublé",
+        "Elles ont triplé",
+        "Elles ont quadruplé",
+        "Elles ont quintuplé"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "Elles ont quadruplé",
+      "explications" : "Selon l'Agence internationale de l'énergie (AIE), les émissions mondiales de gaz à effet de serre ont quadruplé depuis le début des années 1970. En 1970, les émissions mondiales de gaz à effet de serre s'élevaient à environ 20 milliards de tonnes d'équivalent dioxyde de carbone (CO2e). En 2022, les émissions mondiales de gaz à effet de serre s'élevaient à environ 80 milliards de tonnes d'équivalent CO2e."
+    },
+    {
+      "id" : 32,
+      "libelle" : "À quel degré le réchauffement climatique influence-t-il les départs de feu de forêt ?",
+      "categorie" : "Environnement",
+      "choix" : [
+        "Il les augmente de manière significative",
+        "Il les augmente légèrement",
+        "Il n'a pas d'influence",
+        "Il les diminue"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "Il les augmente de manière significative",
+      "explications" : "Le réchauffement climatique influence les départs de feu de forêt de plusieurs manières, notamment : - Il augmente la température moyenne de l'atmosphère, ce qui rend les conditions plus favorables aux incendies ce qui provoque même des mégafeux - Il réduit l'humidité de l'air, ce qui rend la végétation plus sèche et plus inflammable - Il augmente la fréquence et la durée des sécheresses, ce qui augmente le risque d'incendie"
+    },
+    {
+      "id" : 32,
+      "libelle" : "Quel pays a batu le record de température de 41,8°C en plein hiver",
+      "categorie" : "Environnement",
+      "choix" : [
+        "Maroc",
+        "Etats-Unis",
+        "Algérie",
+        "Brésil"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "Brésil",
+      "explications" : "C'est au Brésil que le thermomètre a affiché près de 42°C en plein hiver ! Chaque année nous battons de nouveaux records de températures extrêmes dans le monde entier."
+    },
+    {
+      "id" : 33,
+      "libelle" : "Les inondations tuent combien de personnes par an, en moyenne ?",
+      "categorie" : "Environnement",
+      "choix" : [
+        "2000",
+        "3000",
+        "4000",
+        "5000"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "4000",
+      "explications" : "Les inondations tuent en moyenne 4000 personnes par an. Le pays le plus impacté par les inondations est l'Inde. Cet événement climatique est de plus en plus récurrent dans le monde et tue de plus en plus à cause du dérèglement climatique"
+    },
+    {
+      "id" : 34,
+      "libelle" : "Au cours de l'année 2022, le glacier La Mer de Glace a perdu combien de mètres de glace ?",
+      "categorie" : "Environnement",
+      "choix" : [
+        "3 mètres",
+        "8 mètres",
+        "12 mètres",
+        "16 mètres"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "16 mètres",
+      "explications" : "La mer de glace est descendue de 16 mètres ! Si la fonte continue ainsi, le glacier n'existera plus en 2100 d'après France 3 Auvergne Rhones Alpes"
+    },
+    {
+      "id" : 35,
+      "libelle" : "Qu'est ce qui produit le plus de gaz à effet de serre ?",
+      "categorie" : "Environnement",
+      "choix" : [
+        "La production de viande",
+        "Les transports",
+        "Le secteur industriel",
+        "Les Data Centers"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "Les transports",
+      "explication" : "Ce sont les transports qui polluent le plus avec 30%, suivie de l'industrie à 25%"
+    },
+    {
+      "id" : 36,
+      "libelle" : "Parmis ces espèces, lequelles sont disparues ?",
+      "categorie" : "Environnement",
+      "choix" : [
+        "Le Melomys Rubicola, un petit rongeur",
+        "Le phoque moine des Caraïbes",
+        "L'éléphant de Suuumatra",
+        "Le Marsouin aptère du Yangtsé"
+      ],
+      "questionType" : "manyAnswers",
+      "choixCorrect" : [
+        "Le Melomys Rubicola, un petit rongeur",
+        "Le phoque moine des Caraïbes"
+      ],
+      "explications" : "Le melomys rubicola et le phoque moine des Caraïbes ont malheureusement disparu en 2016 et 2008. L'Eléphant de Sumatra et le Marsouin aptère du Yangtsé, sont des espèces en voie de disparition à cause braconnage et de la déforestation, pas encore disparu mais cela arrivera bientôt si l'on ne réagit pas..."
+    },
+    {
+      "id" : 37,
+      "libelle" : "Quel pays subit le plus la déforestation ?",
+      "categorie" : "Environnement",
+      "choix" : [
+        "République Démocratique du Congo",
+        "Bolivie",
+        "Brésil",
+        "Ghana"
+      ],
+      "questionType" : "singleAnswer",
+      "choixCorrect" : "Brésil",
+      "explication" : "C'est le Brésil le pays le plus déforesté. Un arbre absorbe environ 25 kg de CO2 par an, pour absorber toute l'empreinte carbonne des français, il faudrait planter 3 000 000 km2 de foret soit 4,5 fois la superficie de la France."
+    }
+  ]
+}
