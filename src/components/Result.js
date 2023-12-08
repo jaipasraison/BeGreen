@@ -6,12 +6,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import alimentation from '../img/icon_alimentation.png';
-import energie from '../img/icon_energie.png';
-import environnement from '../img/icon_environnement.png';
-import quotidien from '../img/icon_quotidien.png';
-import transport from '../img/icon_transports.png';
-import base from '../img/icon_base.png';
+import Iconalimentation from '../img/icon_alimentation.png';
+import Iconenergie from '../img/icon_.png';
+import Iconenvironnement from '../img/icon_environnement.png';
+import Iconquotidien from '../img/icon_quotidien.png';
+import Icontransport from '../img/icon_transports.png';
+import Iconbase from '../img/icon_base.png';
 
 
 // import { useParams } from 'react-router';
@@ -58,13 +58,14 @@ const Result = () => {
             <NavDropdown
               id="nav-dropdown-dark-example"
               title="Thèmes"
+              menuVariant="dark"
             >
-              <NavDropdown.Item href="#action/3.1"><img src={base} alt="Logo theme base" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.1"><img src={alimentation} alt="Logo theme alimentation" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.1"><img src={energie} alt="Logo theme energie" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.1"><img src={environnement} alt="Logo theme environnment" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.1"><img src={quotidien} alt="Logo theme quotidien" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.1"><img src={transport} alt="Logo theme transport" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><img src={Iconbase} alt="Logo theme base" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><img src={Iconalimentation} alt="Logo theme alimentation" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><img src={Iconenergie} alt="Logo theme energie" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><img src={Iconenvironnement} alt="Logo theme environnment" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><img src={Iconquotidien} alt="Logo theme quotidien" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><img src={Icontransport} alt="Logo theme transport" class="img-fluid" width="30" height="24" /></NavDropdown.Item>
 
             </NavDropdown>
           </Nav>
