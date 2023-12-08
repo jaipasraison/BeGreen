@@ -1,77 +1,87 @@
-export default function Konami(){
+import { useEffect, useState } from 'react';
+import rickAudio from '../ressources/rick.mp3';
+import zizouAudio from '../ressources/zizou.mp3';
+
+export default function Konami() {
+    const [audioRickPlaying, setAudioRickPlaying] = useState(false);
+    const [audioZizouPlaying, setAudioZizouPlaying] = useState(false);
     let konamiPosition = 0;
     let rickPosition = 0;
-    let bianPosition = 0;
-    const konami = [
-        "ArrowUp",
-        "ArrowUp",
-        "ArrowDown",
-        "ArrowDown",
-        "ArrowLeft",
-        "ArrowRight",
-        "ArrowLeft",
-        "ArrowRight",
-        "KeyB",
-        "KeyQ",
-    ];
-    let rick = [
-        "KeyR",
-        "KeyI",
-        "KeyC",
-        "KeyK",
-    ];
-    let cuckbian = [
-        "KeyC",
-        "KeyU",
-        "KeyC",
-        "KeyK",
-        "KeyB",
-        "KeyI",
-        "KeyQ",
-        "KeyN",
-    ]
 
-    window.addEventListener("keydown", (e) => {
+    const [position, setPosition] = useState(0);
+    const konami = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "KeyB", "KeyQ"];
+    const rick = ["KeyR", "KeyI", "KeyC", "KeyK"];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setPosition((prevPosition) => (prevPosition < 100 ? prevPosition + 1 : 0));
+        }, 100);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    function handleKeyDown(e) {
         watchKonami(e);
         watchRick(e);
-        watchBian(e);
-    });
+    }
 
-    function watchKonami(e){
-        if (e.code == konami[konamiPosition]){
-            konamiPosition ++;
+    function watchKonami(e) {
+        e.preventDefault();
+        if (e.code === konami[konamiPosition]) {
+            konamiPosition++;
             console.log(e.code);
-           
-            if (konamiPosition === konami.length){
-                alert("WOOOAAAAW");
+
+            if (konamiPosition === konami.length) {
                 konamiPosition = 0;
+                setAudioZizouPlaying(true);
             }
-        }else{
+        } else {
             konamiPosition = 0;
         }
     }
 
-    function watchRick(e){
-        if (e.code == rick[rickPosition]){
+    function watchRick(e) {
+        e.preventDefault();
+        if (e.code === rick[rickPosition]) {
             rickPosition++;
             console.log(e.code);
 
-            if(rickPosition === rick.length){
-                alert('Kuuuu');
+            if (rickPosition === rick.length) {
                 rickPosition = 0;
+                setAudioRickPlaying(true);
             }
+        } else {
+            rickPosition = 0;
         }
     }
 
-    function watchBian(e){
-        if (e.code == cuckbian[bianPosition]){
-            bianPosition++;
-            console.log(e.code);
+    useEffect(() => {
+        const audioRick = new Audio(rickAudio);
+        const audioZizou = new Audio(zizouAudio);
 
-            if(bianPosition === cuckbian.length){
-                alert('Je suis le cuck originel');
-                bianPosition = 0;
-            }
+        if (audioRickPlaying) {
+            audioRick.play();
         }
-    }
+
+        if (audioZizouPlaying) {
+            audioZizou.play();
+        }
+
+        return () => {
+            audioRick.pause();
+            audioRick.currentTime = 0;
+            audioZizou.pause();
+            audioZizou.currentTime = 0;
+        };
+    }, [audioRickPlaying, audioZizouPlaying]);
+
+    useEffect(() => {
+        window.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [audioRickPlaying, audioZizouPlaying]);
+
+    return null; 
 }
