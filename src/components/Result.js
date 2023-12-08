@@ -100,6 +100,7 @@ const Result = () => {
             </div>
           ))}
         </div>
+        <div class="banderole"></div>
       </main>
     </>
   );
