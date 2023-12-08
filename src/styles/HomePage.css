@@ -26,6 +26,7 @@ header {
 main {
     text-align: center;
     max-width: 800px;
+    height: fit-content;
     margin: 20px auto;
 }
 
@@ -33,7 +34,8 @@ p {
     line-height: 1.6;
 }
 
-button {
+.navlink {
+    text-decoration: none;
     padding: 10px 20px;
     background-color: #0d0d0d;
     color: #fff;
