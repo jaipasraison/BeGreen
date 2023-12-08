@@ -3,7 +3,7 @@ import formData from '../questions.json';
 import '../styles/form.css';
 
 const FormComponent = () => {
-  const [current_page, setPage] = useState(1);
+  const [current_page, setPage] = useState(3);
   const totalSteps = formData.pages.length;
   const [formResponses, setFormResponses] = useState(Array(totalSteps).fill({}));
 
@@ -96,7 +96,7 @@ const FormComponent = () => {
                 handleInputChange(question.id, updatedResponse);
               }}
             />
-            <label htmlFor={`checkbox-${index}`}>{option}</label>
+            <label htmlFor={`checkbox-${index}`} className='test'>{option}</label>
           </div>
         ));
       case 'textarea':
