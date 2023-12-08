@@ -110,11 +110,11 @@ const Result = () => {
 
 
   const cardData = [
-    { title: 'Alimentation', imageSrc: alim, percentage: pAlimentation },
-    { title: 'Energie', imageSrc: ene, percentage: pEnergieInternet },
-    { title: 'Gestes du quotidien', imageSrc: quot, percentage: pQuotidient },
-    { title: 'Transport', imageSrc: tran, percentage: pTransport },
-    { title: 'Environnement', imageSrc: env, percentage: "incoming" },
+    { route : "Alimentation",title: 'Alimentation', imageSrc: alim, percentage: pAlimentation },
+    { route : "Energie",title: 'Energie', imageSrc: ene, percentage: pEnergieInternet },
+    { route : "Gestes_du_quotidien",title: 'Gestes du quotidien', imageSrc: quot, percentage: pQuotidient },
+    { route : "Transport",title: 'Transport', imageSrc: tran, percentage: pTransport },
+    { route : "Environnement", title: 'Environnement', imageSrc: env, percentage: "incoming" },
   ];
 
   const additionalCards = [
@@ -209,7 +209,7 @@ const Result = () => {
               <NavLink
                 className={"none"}
                 to={{
-                  pathname: `../quizz/${carte.title.toLowerCase()}`,
+                  pathname: `../quizz/${carte.route.toLowerCase()}`,
                 }}
               ><div key={index} className="card_stats">
                   <img src={carte.imageSrc} alt={carte.title} className="card_stats-image" />
