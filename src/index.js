@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import FormComponent from './components/FormPageTest';
 import QuizzFormComponent from './components/quizz/QuizzFormPage';
+import Result from './components/Result'
 
 import {
   createBrowserRouter,
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/quizz/:theme",
     element: <QuizzFormComponent />
+  },
+  {
+    path: "/result",
+    element: <Result/>
   }
 ])
 
