@@ -102,6 +102,8 @@ const FormComponent = () => {
                   : (response || []).filter((selectedOption) => selectedOption !== option);
 
                 handleInputChange(question.id, updatedResponse);
+
+                // test
               }}
             />
           </div>
