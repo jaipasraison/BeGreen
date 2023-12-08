@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import formData from '../questions.json';
 import '../styles/form.css';
 
+import { NavLink } from 'react-router-dom';
+
+
 const FormComponent = () => {
-  const [current_page, setPage] = useState(3);
+  const [current_page, setPage] = useState(1);
   const totalSteps = formData.pages.length;
   const [formResponses, setFormResponses] = useState(Array(totalSteps).fill({}));
 
@@ -46,6 +49,10 @@ const FormComponent = () => {
       return updatedResponses;
     });
   };
+  const getResult = () => {
+      // Stockez newFormResult dans le localStorage
+      localStorage.setItem('formResult', JSON.stringify(formResponses));
+  };
 
   const renderFormField = (question) => {
     const response = formResponses[current_page - 1][question.id];
@@ -83,7 +90,8 @@ const FormComponent = () => {
         );
       case 'checkbox':
         return question.options.map((option, index) => (
-          <div key={index}>
+          <div key={index} className='container'>
+            <label htmlFor={`checkbox-${index}`} className='test'>{option}</label>
             <input
               type="checkbox"
               id={`checkbox-${index}`}
@@ -96,7 +104,6 @@ const FormComponent = () => {
                 handleInputChange(question.id, updatedResponse);
               }}
             />
-            <label htmlFor={`checkbox-${index}`} className='test'>{option}</label>
           </div>
         ));
       case 'textarea':
@@ -105,6 +112,20 @@ const FormComponent = () => {
             value={response || ''}
             onChange={(e) => handleInputChange(question.id, e.target.value)}
           />
+        );
+      case 'range':
+        return (
+          <div>
+            <input
+              type="range"
+              min={question.min}
+              max={question.max}
+              step={question.step}
+              value={response || question.min}
+              onChange={(e) => handleInputChange(question.id, e.target.value)}
+            />
+            <output>{response || question.min}</output>
+          </div>
         );
       default:
         return null;
@@ -128,7 +149,7 @@ const FormComponent = () => {
               <div key={page.id}>
                 {page.questions.map((question) => (
                   <div key={question.id}>
-                    <label>{question.text}</label>
+                    <label className='default'>{question.text} </label>
                     {renderFormField(question)}
                   </div>
                 ))}
@@ -142,9 +163,13 @@ const FormComponent = () => {
           ) : (
             <div>
               <button onClick={(e) => previousPage(e)}>Précédent</button>
-              <button onClick={() => console.log('Envoyer :', formResponses)}>
+              <NavLink onClick={getResult}
+                to={{
+                  pathname: "/result",
+                }}
+              >
                 Envoyer
-              </button>
+              </NavLink>
             </div>
           )}
         </form>
