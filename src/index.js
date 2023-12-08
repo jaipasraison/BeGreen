@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import FormComponent from './components/FormPageTest';
-import QuizzFormComponent from './components/quizz/QuizzFormPage';
+import QuizzFormComponent from './components/quizz/QuizzFormComponent';
 import Result from './components/Result'
 
 import {
