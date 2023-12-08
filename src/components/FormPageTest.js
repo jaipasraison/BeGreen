@@ -83,7 +83,8 @@ const FormComponent = () => {
         );
       case 'checkbox':
         return question.options.map((option, index) => (
-          <div key={index}>
+          <div key={index} className='container'>
+            <label htmlFor={`checkbox-${index}`} className='test'>{option}</label>
             <input
               type="checkbox"
               id={`checkbox-${index}`}
@@ -96,7 +97,6 @@ const FormComponent = () => {
                 handleInputChange(question.id, updatedResponse);
               }}
             />
-            <label htmlFor={`checkbox-${index}`} className='test'>{option}</label>
           </div>
         ));
       case 'textarea':
@@ -142,7 +142,7 @@ const FormComponent = () => {
               <div key={page.id}>
                 {page.questions.map((question) => (
                   <div key={question.id}>
-                    <label>{question.text}</label>
+                    <label className='default'>{question.text} </label>
                     {renderFormField(question)}
                   </div>
                 ))}
