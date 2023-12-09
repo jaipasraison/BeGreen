@@ -102,6 +102,8 @@ const FormComponent = () => {
                   : (response || []).filter((selectedOption) => selectedOption !== option);
 
                 handleInputChange(question.id, updatedResponse);
+
+                // test
               }}
             />
           </div>
@@ -163,7 +165,9 @@ const FormComponent = () => {
           ) : (
             <div>
               <button onClick={(e) => previousPage(e)}>Précédent</button>
-              <NavLink onClick={getResult}
+              <NavLink 
+              className={"navlink"}
+              onClick={getResult}
                 to={{
                   pathname: "/result",
                 }}

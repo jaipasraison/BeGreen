@@ -1,8 +1,5 @@
 .main-container {
     margin-top: 10rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .main-content {
@@ -16,7 +13,7 @@
     margin-top: 20px;
 }
 
-.card {
+.card_stats {
     width: 200px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -24,14 +21,14 @@
     margin-bottom: 20px;
 }
 
-.card-container {
+.card_stats-container {
     display: flex;
     flex-wrap: wrap;
     /* Les cartes peuvent passer à la ligne si l'espace est insuffisant */
-    justify-content: space-between;
+    justify-content: left;
 }
 
-.card-image {
+.card_stats-image {
     width: 100px;
     /* Ajustez la largeur selon vos besoins */
     height: 100px;
@@ -39,13 +36,23 @@
     object-fit: cover;
 }
 
-.card-title {
+.card_stats-title {
     font-size: 18px;
     margin: 10px;
 }
 
-.card-percentage {
+.card_stats-percentage {
     font-size: 16px;
     margin: 10px;
     color: #0d0d0d;
+  }
+  
+
+  .dropdown-menu{
+    --bs-dropdown-min-width: none !important;
+}
+
+.none{
+    text-decoration: none;
+    color: black;
 }
